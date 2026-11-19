@@ -4,7 +4,7 @@ A modern, responsive Sudoku game built using **HTML, CSS, and JavaScript**. Enjo
 
 ## 🌐 Live Demo
 
-🚀 **[Play Premium Sudoku Here](https://sehgal1001.github.io/premium-sudoku-game/)**
+🚀 **[Play Premium Sudoku](https://sehgal1001.github.io/premium-sudoku-game/)**
 
 ## ✨ Features
 
@@ -78,20 +78,11 @@ cd premium-sudoku-game
 
 Open `index.html` in your browser or use the Live Server extension in VS Code.
 
-## 🌍 Deployment
+## 🌍 Live Deployment
 
-This project is hosted using **GitHub Pages**.
+This project is deployed using **GitHub Pages**.
 
-To deploy your own version:
-
-1. Upload the project files to your GitHub repository.
-2. Open repository Settings.
-3. Navigate to Pages.
-4. Select Deploy from a branch.
-5. Select the `main` branch and `/ (root)` folder.
-6. Click Save.
-
-Your website will be available through your GitHub Pages URL.
+🔗 **Live Website:** https://sehgal1001.github.io/premium-sudoku-game/
 
 ## 💾 Data Storage
 
