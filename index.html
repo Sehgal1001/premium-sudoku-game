@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d1b" />
+  <title>Sudoku — The Daily Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Sudoku home"><span class="brand-mark">▦</span><span>SUDOKU<span class="brand-light">/STUDIO</span></span></a>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☼</button>
+        <button class="icon-btn" id="helpBtn" title="How to play" aria-label="How to play">?</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span> YOUR DAILY MOMENT OF FOCUS</div>
+        <h1>Clear your mind.<br><span>Fill the grid.</span></h1>
+        <p class="hero-copy">A little logic. A little patience. A beautifully satisfying solve.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card"><span class="stat-icon">✦</span><div><strong id="bestTime">--:--</strong><small>BEST TIME</small></div></div>
+        <div class="stat-card"><span class="stat-icon">♧</span><div><strong id="gamesWon">0</strong><small>GAMES WON</small></div></div>
+      </div>
+    </section>
+
+    <section class="game-layout">
+      <div class="board-panel">
+        <div class="game-toolbar">
+          <div class="difficulty-wrap"><label for="difficulty">DIFFICULTY</label><select id="difficulty"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option><option value="expert">Expert</option></select></div>
+          <div class="game-metrics"><div><small>TIME</small><strong id="timer">00:00</strong></div><div><small>MISTAKES</small><strong id="mistakes">0 / 3</strong></div></div>
+        </div>
+        <div class="board-frame"><div id="board" class="sudoku-board" role="grid" aria-label="Sudoku board"></div></div>
+        <div class="number-pad" id="numberPad" aria-label="Number pad"></div>
+        <div class="board-actions">
+          <button class="action-btn" id="notesBtn"><span>✎</span> Notes <kbd>N</kbd></button>
+          <button class="action-btn" id="eraseBtn"><span>⌫</span> Erase <kbd>⌫</kbd></button>
+          <button class="action-btn" id="undoBtn"><span>↶</span> Undo <kbd>U</kbd></button>
+          <button class="action-btn hint-action" id="hintBtn"><span>✧</span> Hint</button>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="side-card progress-card">
+          <div class="side-heading"><div><span class="eyebrow">YOUR SESSION</span><h2>Game progress</h2></div><span class="progress-badge" id="progressPct">0%</span></div>
+          <div class="progress-track"><div id="progressBar"></div></div>
+          <div class="progress-labels"><span id="filledCount">0 of 81 filled</span><span>Keep going</span></div>
+        </div>
+        <div class="side-card">
+          <span class="eyebrow">QUICK CONTROLS</span><h2>Make your move</h2>
+          <div class="control-list"><div><span class="control-icon">⌨</span><div><strong>Keyboard</strong><small>1–9 to enter · arrows to move</small></div></div><div><span class="control-icon">◉</span><div><strong>Notes mode</strong><small>Track possibilities in a cell</small></div></div><div><span class="control-icon">✧</span><div><strong>Smart hint</strong><small>Reveal one correct number</small></div></div></div>
+          <button class="primary-btn" id="newGameBtn">New game <span>↗</span></button>
+        </div>
+        <div class="quote-card"><span class="quote-mark">“</span><p>Great things are done by a series of small things brought together.</p><small>— VINCENT VAN GOGH</small></div>
+      </aside>
+    </section>
+    <footer><span>© 2025 SUDOKU/STUDIO</span><span>DESIGNED FOR A CLEARER MIND <b>✦</b></span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="closeModal">×</button><div class="modal-symbol" id="modalSymbol">✦</div><h2 id="modalTitle">A moment of clarity.</h2><p id="modalText">You completed the puzzle.</p><button class="primary-btn" id="modalAction">Play again <span>↗</span></button></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
